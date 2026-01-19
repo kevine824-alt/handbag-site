@@ -4,6 +4,10 @@ import Nav from "./Nav";
 export const metadata = {
   title: "Handcrafted Bags Studio",
   description: "One-of-a-kind handcrafted handbags",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
