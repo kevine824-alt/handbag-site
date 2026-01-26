@@ -1,0 +1,8 @@
+{
+  "slug": "bag-2",
+  "name": "Bag 2",
+  "description": "Second bag for testing.",
+  "images": [
+    "/images/bag-2.jpg"
+  ]
+}
