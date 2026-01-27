@@ -1,89 +1,108 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function HomePage() {
   return (
-   <section className="space-y-14 py-10 sm:py-14">
-      {/* Hero */}
-      <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-        <div className="space-y-6">
-          <div className="space-y-3">
-            <p className="text-sm font-semibold tracking-wide text-gray-600">
-              Handcrafted • One of a kind • Made to be used
-            </p>
+    <section className="space-y-12">
+      {/* Split Hero - Full Width */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b">
+        <div className="grid h-[clamp(440px,58vh,600px)] lg:h-[clamp(500px,60vh,680px)] lg:grid-cols-2 overflow-hidden">
+          <div className="flex h-full items-center bg-stone-100 px-6 sm:px-10 lg:px-16">
+            <div className="max-w-xl space-y-6 py-10 lg:py-0">
+              <p className="text-base font-serif italic tracking-wide text-orange-600">
+  One-of-One Handcrafted Experience
+</p>
 
-            <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl">
-  Sew Nerdy Bags
-</h1>
-<div className="h-1 w-16 rounded bg-orange-600" />
+              <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                Handmade bags with personality.
+              </h1>
 
-            <p className="max-w-xl text-lg leading-relaxed text-gray-700">
-              One-of-a-kind, handcrafted bags—made with care, personality, and
-              details you won’t find twice.
-            </p>
+              <p className="text-base leading-relaxed text-gray-700 sm:text-lg">
+                Thoughtful details, durable construction, and fabrics that feel
+                like you. Browse the gallery to see current pieces.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center justify-center border border-gray-900 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-900 hover:text-white transition"
+                >
+                  View Gallery
+                </Link>
+
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center justify-center px-2 py-3 text-sm font-semibold text-orange-700 hover:text-orange-800 transition"
+                >
+                  See what’s new →
+                </Link>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="/gallery"
-              className="inline-flex items-center justify-center rounded-md bg-orange-600 px-5 py-2.5 text-white transition hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-600/40"
-            >
-              View Gallery
-            </a>
-
-            <a
-              href="/commission"
-              className="inline-flex items-center justify-center rounded-md border px-5 py-2.5 transition hover:bg-black hover:text-white"
-            >
-              Commission a Bag
-            </a>
-          </div>
-
-          <p className="text-sm text-gray-600">
-            Looking for something specific? Commissions are welcome—share your
-            colors, size, and any special details.
-          </p>
-        </div>
-
-        <div className="overflow-hidden rounded-3xl border bg-white shadow-md">
-          <div className="aspect-[4/3] w-full">
-            <img
-              src="/images/hero-bag.png"
-              alt="Featured Sew Nerdy bag"
-              className="h-full w-full object-cover"
-            />
+          {/* Image panel */}
+          <div className="relative h-full">
+           <Image
+  src="/images/hero-bag.png"
+  alt="Handcrafted bag"
+  fill
+  priority
+  className="object-cover scale-[1.08]"
+  style={{ objectPosition: "50% 60%" }}
+  sizes="(min-width: 1024px) 50vw, 100vw"
+/>
           </div>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="h-px w-full bg-black/10" />
-
-      {/* Quick highlights */}
-      <div className="grid gap-4 sm:grid-cols-3">
-        {[
-          {
-            title: "Handcrafted",
-            text: "Built with care and attention to every stitch.",
-          },
-          {
-            title: "One-of-a-kind",
-            text: "No mass production—each piece is its own thing.",
-          },
-          {
-            title: "Made to be used",
-            text: "Beautiful, practical, and designed to hold up.",
-          },
-        ].map((item) => (
-          <div
-            key={item.title}
-            className="rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-          >
-            <div className="text-sm font-semibold tracking-tight">
-              {item.title}
-            </div>
-            <p className="mt-2 text-sm leading-relaxed text-gray-600">
-              {item.text}
+      {/* Supporting content (safe, minimal) */}
+      <div className="mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-16">
+        <div className="grid gap-10 lg:grid-cols-3">
+          <div className="space-y-2">
+            <h2 className="text-lg font-semibold text-gray-900">
+              Made in small batches
+            </h2>
+            <p className="text-sm leading-relaxed text-gray-700">
+              Each piece is designed and constructed with care—no mass
+              production.
             </p>
           </div>
-        ))}
+
+          <div className="space-y-2">
+            <h2 className="text-lg font-semibold text-gray-900">
+              Built for real life
+            </h2>
+            <p className="text-sm leading-relaxed text-gray-700">
+              Practical shapes, durable stitching, and details that hold up to
+              daily use.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h2 className="text-lg font-semibold text-gray-900">
+              One-of-a-kind fabrics
+            </h2>
+            <p className="text-sm leading-relaxed text-gray-700">
+              Patterns and materials chosen to feel calm, elevated, and a little
+              nerdy—in the best way.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom CTA */}
+      <div className="mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-16 pb-6">
+        <div className="flex flex-col items-start justify-between gap-4 border-t pt-8 sm:flex-row sm:items-center">
+          <p className="text-sm text-gray-700">
+            Ready to browse current bags?
+          </p>
+          <Link
+            href="/gallery"
+            className="inline-flex items-center justify-center border border-gray-900 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-900 hover:text-white transition"
+          >
+            Go to Gallery
+          </Link>
+        </div>
       </div>
     </section>
   );
