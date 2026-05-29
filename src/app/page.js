@@ -5,53 +5,73 @@ export default function HomePage() {
   return (
     <section className="space-y-0">
 
-      {/* Split Hero - Full Width */}
+      {/* Hero - Full Width */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b">
-        <div className="grid h-[clamp(480px,62vh,680px)] lg:grid-cols-2 overflow-hidden">
+
+        {/* Mobile hero — logo on top, text below */}
+        <div className="flex flex-col items-center bg-stone-50 px-6 pt-8 pb-10 lg:hidden">
+          <Image
+            src="/images/hero-logo.png"
+            alt="Sew Nerdy Bags"
+            width={220}
+            height={220}
+            priority
+            className="mb-6"
+          />
+          <p className="text-xs font-semibold tracking-widest text-orange-600 uppercase text-center mb-4">
+            Handcrafted &nbsp;·&nbsp; One of one &nbsp;·&nbsp; Unapologetically nerdy
+          </p>
+          <h1 className="text-3xl font-semibold tracking-tight text-gray-900 leading-tight text-center mb-4">
+            Every stitch tells a story.
+          </h1>
+          <p className="text-sm leading-relaxed text-gray-600 border-l-2 border-orange-500 pl-4 italic mb-6 self-start">
+            "Your bag should be as unique as your collection. So we make sure it is."
+          </p>
+          <div className="flex flex-wrap gap-4 w-full">
+            <Link href="/gallery" className="flex-1 text-center bg-gray-900 px-6 py-3 text-sm font-semibold text-white">
+              View Gallery
+            </Link>
+            <Link href="/our-story" className="flex-1 text-center border border-gray-400 px-6 py-3 text-sm font-semibold text-gray-700">
+              Our Story →
+            </Link>
+          </div>
+        </div>
+
+        {/* Desktop hero — split layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:h-[clamp(480px,62vh,680px)] overflow-hidden">
 
           {/* Text panel */}
-          <div className="flex h-full items-center bg-stone-50 px-6 sm:px-10 lg:px-16">
-            <div className="max-w-xl space-y-6 py-10 lg:py-0">
-
+          <div className="flex h-full items-center bg-stone-50 px-16">
+            <div className="max-w-xl space-y-6">
               <p className="text-xs font-semibold tracking-widest text-orange-600 uppercase">
                 Handcrafted &nbsp;·&nbsp; One of one &nbsp;·&nbsp; Unapologetically nerdy
               </p>
-
-              <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl leading-tight">
+              <h1 className="text-5xl font-semibold tracking-tight text-gray-900 leading-tight">
                 Every stitch<br />tells a story.
               </h1>
-
               <p className="text-sm leading-relaxed text-gray-600 border-l-2 border-orange-500 pl-4 italic">
                 "Your bag should be as unique as your collection. So we make sure it is."
               </p>
-
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Link
-                  href="/gallery"
-                  className="inline-flex items-center justify-center bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-700 transition"
-                >
+                <Link href="/gallery" className="inline-flex items-center justify-center bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-700 transition">
                   View Gallery
                 </Link>
-                <Link
-                  href="/our-story"
-                  className="inline-flex items-center justify-center border border-gray-400 px-6 py-3 text-sm font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 transition"
-                >
+                <Link href="/our-story" className="inline-flex items-center justify-center border border-gray-400 px-6 py-3 text-sm font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 transition">
                   Our Story →
                 </Link>
               </div>
-
             </div>
           </div>
 
           {/* Image panel */}
-          <div className="relative h-full bg-stone-50 flex items-center justify-center p-8">
+          <div className="bg-stone-50 flex items-center justify-center px-8 pt-8 pb-12">
             <Image
               src="/images/hero-logo.png"
               alt="Sew Nerdy Bags"
-              fill
+              width={480}
+              height={480}
               priority
-              className="object-contain"
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="w-full max-w-[380px] h-auto"
             />
           </div>
 
