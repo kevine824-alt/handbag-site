@@ -44,14 +44,13 @@ export default function HomePage() {
           </div>
 
           {/* Image panel */}
-          <div className="relative h-full">
+          <div className="relative h-full bg-stone-50 flex items-center justify-center p-8">
             <Image
-              src="/images/hero-bag.png"
-              alt="Handcrafted bag by Sew Nerdy Bags"
+              src="/images/hero-logo.png"
+              alt="Sew Nerdy Bags"
               fill
               priority
-              className="object-cover scale-[1.08]"
-              style={{ objectPosition: "50% 60%" }}
+              className="object-contain"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
           </div>
