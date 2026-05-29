@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       </head>
   <body className="min-h-screen flex flex-col bg-white text-gray-900">
         <header
-          className="border-b"
+          className="border-b relative z-50"
           style={{
             backgroundImage: "url('/images/bag-pattern.jpg')",
             backgroundRepeat: "repeat",
