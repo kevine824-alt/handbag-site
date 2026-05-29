@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           }}
         >
           <div className="mx-auto max-w-6xl p-4">
-            <div className="flex items-center justify-between rounded-md bg-white/85 px-4 py-3 text-gray-900 backdrop-blur-sm">
+            <div className="flex items-center justify-between rounded-md bg-gray-900/92 px-4 py-3 text-white backdrop-blur-sm">
               <div className="flex items-center gap-3">
                 <img
                   src="/images/logo.png"

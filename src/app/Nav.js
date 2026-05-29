@@ -31,8 +31,8 @@ export default function Nav() {
             href={link.href}
             className={
               isActive
-                ? "font-semibold underline underline-offset-8"
-                : "hover:underline underline-offset-8"
+                ? "font-semibold text-white underline underline-offset-8"
+                : "text-gray-400 hover:text-white hover:underline underline-offset-8 transition-colors"
             }
           >
             {link.label}
