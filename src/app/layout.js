@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./Nav";
+import Script from "next/script";
 
 export const metadata = {
   title: "Handcrafted Bags Studio",
@@ -13,6 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="light">
+      <head>
+        <Script
+          src="https://static.klaviyo.com/onsite/js/TMcNs4/klaviyo.js?company_id=TMcNs4"
+          strategy="afterInteractive"
+        />
+      </head>
   <body className="min-h-screen flex flex-col bg-white text-gray-900">
         <header
           className="border-b"
