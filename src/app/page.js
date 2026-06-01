@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b">
 
         {/* Mobile hero — logo on top, text below */}
-        <div className="flex flex-col items-center bg-stone-50 px-6 pt-8 pb-10 lg:hidden">
+        <div className="flex flex-col items-center px-6 pt-8 pb-10 lg:hidden" style={{ backgroundImage: "url('/images/parchment.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
           <Image
             src="/images/hero-logo.png"
             alt="Sew Nerdy Bags"
@@ -18,13 +18,13 @@ export default function HomePage() {
             priority
             className="mb-6"
           />
-          <p className="text-xs font-semibold tracking-widest text-orange-600 uppercase text-center mb-4">
+          <p className="text-xs font-semibold tracking-widest uppercase text-center mb-4" style={{ color: "#92400e", textShadow: "0 1px 2px rgba(255,255,255,0.6)" }}>
             Handcrafted &nbsp;·&nbsp; One of one &nbsp;·&nbsp; Unapologetically nerdy
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-gray-900 leading-tight text-center mb-4">
+          <h1 className="text-3xl font-semibold tracking-tight leading-tight text-center mb-4" style={{ color: "#1c1917", textShadow: "0 1px 3px rgba(255,255,255,0.7)" }}>
             Every stitch tells a story.
           </h1>
-          <p className="text-sm leading-relaxed text-gray-600 border-l-2 border-orange-500 pl-4 italic mb-6 self-start">
+          <p className="w-full text-sm leading-relaxed border-l-2 border-orange-600 pl-4 italic mb-6" style={{ color: "#292524", textShadow: "0 1px 2px rgba(255,255,255,0.6)" }}>
             "Your bag should be as unique as your collection. So we make sure it is."
           </p>
           <div className="flex flex-wrap gap-4 w-full">
@@ -41,15 +41,15 @@ export default function HomePage() {
         <div className="hidden lg:grid lg:grid-cols-2 lg:h-[clamp(480px,62vh,680px)] overflow-hidden">
 
           {/* Text panel */}
-          <div className="flex h-full items-center bg-stone-50 px-16">
+          <div className="flex h-full items-center px-16" style={{ backgroundImage: "url('/images/parchment.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
             <div className="max-w-xl space-y-6">
-              <p className="text-xs font-semibold tracking-widest text-orange-600 uppercase">
+              <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#92400e", textShadow: "0 1px 2px rgba(255,255,255,0.6)" }}>
                 Handcrafted &nbsp;·&nbsp; One of one &nbsp;·&nbsp; Unapologetically nerdy
               </p>
-              <h1 className="text-5xl font-semibold tracking-tight text-gray-900 leading-tight">
+              <h1 className="text-5xl font-semibold tracking-tight leading-tight" style={{ color: "#1c1917", textShadow: "0 1px 3px rgba(255,255,255,0.7)" }}>
                 Every stitch<br />tells a story.
               </h1>
-              <p className="text-sm leading-relaxed text-gray-600 border-l-2 border-orange-500 pl-4 italic">
+              <p className="text-sm leading-relaxed border-l-2 border-orange-600 pl-4 italic" style={{ color: "#292524", textShadow: "0 1px 2px rgba(255,255,255,0.6)" }}>
                 "Your bag should be as unique as your collection. So we make sure it is."
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">

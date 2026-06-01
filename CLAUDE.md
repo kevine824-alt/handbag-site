@@ -10,7 +10,7 @@ A Next.js website for Sew Nerdy Bags, a mother-daughter (Elaine and Megan) handc
 
 **Live site:** https://sewnerdybags.com  
 **Repo:** GitHub → auto-deploys to Vercel on push  
-**Local dev:** `npm run dev` (localhost:3000) inside `handbag-site/`
+**Local dev:** `cd "OneDrive\Documents\Cowork Playground\Sew Nerdy Bags\handbag-site"` then `npm run dev` (localhost:3000)
 
 ---
 
@@ -133,7 +133,7 @@ handbag-site/
 - **Google Workspace:** kevin@, megan@, elaine@sewnerdybags.com; info@ and buildabag@ are Groups (both Megan and Elaine receive)
 - **Klaviyo:** Sending domain `mail.sewnerdybags.com`; mailing list "Sew Nerdy Bags"; embedded form ID `XdKNJt` on `/mailing-list`
 - **Klaviyo script** already in `layout.js`
-- **Next step:** Build welcome email flow in Klaviyo (triggers on list join)
+- **Welcome email flow:** 3-email sequence built in Klaviyo, flow structure complete (Day 0, Day 3, Day 7). Content drafted and approved. Next step: fill in email content inside each block in Klaviyo starting with Email 1.
 
 ---
 
@@ -195,7 +195,7 @@ Vercel auto-deploys on push. Always review locally first.
 - Email infrastructure (Google Workspace + Klaviyo)
 
 **In progress / next:**
-- Klaviyo welcome email flow (first email triggered on list join)
+- Klaviyo welcome email flow — flow structure done, need to fill in email content (3 emails: Day 0 welcome, Day 3 story, Day 7 nudge with DragonCon bag)
 - Contact page (needs design + form wired to email)
 - Bag JSON files still have placeholder names — need real names/descriptions
 - Commission form needs to be wired to email (buildabag@sewnerdybags.com)

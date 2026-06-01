@@ -46,7 +46,21 @@ export default function RootLayout({ children }) {
 
         <main className="flex-1 mx-auto w-full max-w-6xl p-6">{children}</main>
 
-        <footer className="border-t p-4 text-center text-sm text-gray-500">
+        <footer className="border-t p-6 text-center text-sm text-gray-500">
+          <div className="flex justify-center gap-5 mb-3">
+            <a href="https://www.instagram.com/sewnerdybags/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: "#6b7280" }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/sewnerdybags/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: "#6b7280" }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
           © {new Date().getFullYear()} Sew Nerdy Bags. All rights reserved.
         </footer>
       </body>
