@@ -1,8 +1,8 @@
 {
   "slug": "bag-2",
-  "name": "Bag 2",
-  "description": "Second bag for testing.",
-  "images": [
-    "/images/bag-2.jpg"
-  ]
+  "name": "Cherry Blossom Crossbody",
+  "category": "one-of-a-kind",
+  "style": "Crossbody",
+  "description": "A one-of-a-kind crossbody messenger built on a teal carbon-fiber base with a hand-selected cherry blossom fabric flap. The print features whimsical blue cats perched among blooms — playful, detailed, and completely original. Adjustable strap, magnetic snap closure, and the Sew Nerdy Bags leather label stitched to the front.",
+  "images": ["/images/bag-2.jpg"]
 }

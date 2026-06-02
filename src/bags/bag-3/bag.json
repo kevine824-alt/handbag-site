@@ -1,8 +1,8 @@
 {
   "slug": "bag-3",
-  "name": "Bag 3",
-  "description": "New Cat Bag on Purple/Black Backpack.",
-  "images": [
-    "/images/bag-3.jpg"
-  ]
+  "name": "The Mystic Cat",
+  "category": "one-of-a-kind",
+  "style": "Backpack",
+  "description": "Black and purple vegan leather backpack with a hand-embroidered mystic cat on the front pocket. The design glows with detail up close — stitched fur texture, golden eyes, and a tail that curls off the panel edge. Top carry handle, adjustable shoulder straps, and side slip pockets.",
+  "images": ["/images/bag-3.jpg"]
 }

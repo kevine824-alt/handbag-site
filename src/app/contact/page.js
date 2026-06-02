@@ -1,6 +1,37 @@
 'use client'
 
+import { useState } from 'react';
+
 export default function ContactPage() {
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus('sending');
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  }
+
   return (
     <div>
 
@@ -25,7 +56,7 @@ export default function ContactPage() {
 
           {/* Form — takes 2 cols */}
           <div className="lg:col-span-2">
-            <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
@@ -49,12 +80,12 @@ export default function ContactPage() {
               </div>
 
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", borderTop: "1px solid #e5e7eb", paddingTop: "1.25rem" }}>
-                <button type="submit" style={{ background: "#111827", color: "#fff", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", padding: "0.75rem 2rem", border: "none", cursor: "pointer" }}>
-                  Send Message
+                <button type="submit" disabled={status === 'sending'} style={{ background: "#111827", color: "#fff", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", padding: "0.75rem 2rem", border: "none", cursor: status === 'sending' ? 'wait' : 'pointer', opacity: status === 'sending' ? 0.7 : 1 }}>
+                  {status === 'sending' ? 'Sending...' : 'Send Message'}
                 </button>
-                <p style={{ fontSize: "0.78rem", color: "#9ca3af", margin: 0 }}>
-                  We will get back to you as soon as we can.
-                </p>
+                {status === 'success' && <p style={{ fontSize: "0.83rem", color: "#16a34a", margin: 0, fontWeight: 600 }}>Message sent. We will be in touch soon.</p>}
+                {status === 'error' && <p style={{ fontSize: "0.83rem", color: "#dc2626", margin: 0 }}>Something went wrong. Please try again or email us directly.</p>}
+                {status === 'idle' && <p style={{ fontSize: "0.78rem", color: "#9ca3af", margin: 0 }}>We will get back to you as soon as we can.</p>}
               </div>
 
             </form>

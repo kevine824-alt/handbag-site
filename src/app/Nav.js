@@ -79,7 +79,7 @@ export default function Nav() {
   return (
     <>
       {/* Desktop nav */}
-      <nav className="hidden lg:flex gap-4 flex-wrap justify-end">
+      <nav className="hidden lg:flex gap-5 flex-wrap justify-end items-center">
         {links.map((link) => {
           const isActive =
             link.href === "/"
@@ -90,11 +90,17 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={
-                isActive
-                  ? "font-semibold text-white underline underline-offset-8"
-                  : "text-gray-400 hover:text-white hover:underline underline-offset-8 transition-colors"
-              }
+              style={{
+                fontSize: "0.82rem",
+                fontWeight: isActive ? 700 : 500,
+                textDecoration: "none",
+                color: isActive ? "#8b1a1a" : "#4a3728",
+                borderBottom: isActive ? "2px solid #8b1a1a" : "none",
+                paddingBottom: isActive ? "2px" : "0",
+                transition: "color 0.15s",
+              }}
+              onMouseEnter={e => { if (!isActive) e.target.style.color = "#8b1a1a"; }}
+              onMouseLeave={e => { if (!isActive) e.target.style.color = "#4a3728"; }}
             >
               {link.label}
             </Link>
@@ -108,9 +114,9 @@ export default function Nav() {
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
-        <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`} />
-        <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
-        <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+        <span className={`block w-6 h-[2px] bg-[#4a3728] transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`} />
+        <span className={`block w-6 h-[2px] bg-[#4a3728] transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
+        <span className={`block w-6 h-[2px] bg-[#4a3728] transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
       </button>
 
       {/* Mobile menu — rendered at body level via portal */}

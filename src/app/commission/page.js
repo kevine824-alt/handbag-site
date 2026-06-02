@@ -1,8 +1,45 @@
 'use client'
 
 import Link from "next/link";
+import { useState } from 'react';
 
 export default function CommissionPage() {
+  const [status, setStatus] = useState('idle');
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus('sending');
+    const form = e.target;
+    const features = Array.from(form.querySelectorAll('input[name="features"]:checked')).map(el => el.value);
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone?.value || '',
+      theme: form.theme.value,
+      direction: form.direction.value,
+      bagType: form.bagType.value,
+      purpose: form.purpose?.value || '',
+      features,
+      timeline: form.timeline.value,
+      budget: form.budget.value,
+      notes: form.notes?.value || '',
+    };
+    try {
+      const res = await fetch('/api/commission', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  }
   return (
     <div>
 
@@ -65,7 +102,7 @@ export default function CommissionPage() {
             Share a few details and we will get back to you with next steps. Consultation is free. Pricing is agreed before any work begins. A deposit is required to start.
           </p>
 
-          <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column", gap: "1.75rem" }}>
+          <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.75rem" }}>
 
             {/* 1. The vision */}
             <div>
@@ -187,12 +224,12 @@ export default function CommissionPage() {
 
             {/* Submit */}
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", borderTop: "1px solid #e5e7eb", paddingTop: "1.25rem" }}>
-              <button type="submit" style={{ background: "#111827", color: "#fff", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", padding: "0.75rem 2rem", border: "none", cursor: "pointer" }}>
-                Send My Request
+              <button type="submit" disabled={status === 'sending'} style={{ background: "#111827", color: "#fff", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", padding: "0.75rem 2rem", border: "none", cursor: status === 'sending' ? 'wait' : 'pointer', opacity: status === 'sending' ? 0.7 : 1 }}>
+                {status === 'sending' ? 'Sending...' : 'Send My Request'}
               </button>
-              <p style={{ fontSize: "0.78rem", color: "#9ca3af", margin: 0 }}>
-                We will review your request and reach out to discuss next steps. A deposit is required to hold your spot.
-              </p>
+              {status === 'success' && <p style={{ fontSize: "0.83rem", color: "#16a34a", margin: 0, fontWeight: 600 }}>Request received. We will be in touch to discuss next steps.</p>}
+              {status === 'error' && <p style={{ fontSize: "0.83rem", color: "#dc2626", margin: 0 }}>Something went wrong. Please try again or email buildabag@sewnerdybags.com directly.</p>}
+              {status === 'idle' && <p style={{ fontSize: "0.78rem", color: "#9ca3af", margin: 0 }}>We will review your request and reach out to discuss next steps. A deposit is required to hold your spot.</p>}
             </div>
 
           </form>
