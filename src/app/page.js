@@ -64,14 +64,22 @@ export default function HomePage() {
           </div>
 
           {/* Image panel */}
-          <div className="bg-stone-50 flex items-center justify-center px-8 pt-8 pb-12">
+          <div
+            className="flex items-center justify-center"
+            style={{
+              backgroundImage: "url('/images/parchment.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              borderLeft: "1px solid rgba(146,64,14,0.15)",
+            }}
+          >
             <Image
               src="/images/hero-logo.png"
               alt="Sew Nerdy Bags"
               width={480}
               height={480}
               priority
-              className="w-full max-w-[380px] h-auto"
+              className="w-full max-w-[420px] h-auto drop-shadow-md"
             />
           </div>
 
