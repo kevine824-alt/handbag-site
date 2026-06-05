@@ -116,32 +116,43 @@ export default function GalleryPage() {
 
       {/* Hero */}
       <div style={{
-        background: "#111827",
+        backgroundImage: "url('/images/parchment-hero.png')",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
         borderBottom: "3px solid #d97706",
-        padding: "2.5rem 2rem 2rem",
+        height: "220px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        padding: "1rem 15%",
       }}>
         <p style={{
           fontSize: "0.68rem",
           fontWeight: 700,
-          letterSpacing: "0.12em",
+          letterSpacing: "0.14em",
           textTransform: "uppercase",
-          color: "#d97706",
+          color: "#92400e",
           marginBottom: "0.5rem",
+          textShadow: "0 1px 2px rgba(255,255,255,0.4)",
         }}>The Collection</p>
         <h1 style={{
-          color: "#ffffff",
-          fontSize: "clamp(1.6rem, 4vw, 2.2rem)",
+          color: "#1c1917",
+          fontSize: "clamp(1.4rem, 3.5vw, 2.2rem)",
           fontWeight: 700,
-          lineHeight: 1.1,
+          lineHeight: 1.15,
           marginBottom: "0.6rem",
-        }}>One of a Kind. Every Single One.</h1>
+          textShadow: "0 1px 4px rgba(255,255,255,0.5)",
+        }}>Handcrafted. Every Single One.</h1>
         <p style={{
-          color: "rgba(255,255,255,0.6)",
-          fontSize: "0.9rem",
+          color: "#44332a",
+          fontSize: "clamp(0.8rem, 1.5vw, 0.95rem)",
           lineHeight: 1.6,
-          maxWidth: "520px",
+          maxWidth: "480px",
+          textShadow: "0 1px 2px rgba(255,255,255,0.4)",
         }}>
-          Every bag is handcrafted and exists only once. Hover or tap any piece to learn more.
+          Every bag is built by hand. Browse the full collection.
         </p>
       </div>
 

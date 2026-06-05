@@ -27,6 +27,16 @@ const SHOWS = [
   {
     id: 3,
     label: 'On the Horizon',
+    name: 'HizashiCon 2026',
+    dates: 'Oct 31 – Nov 1, 2026',
+    location: 'Pensacola, FL',
+    details: 'Pensacola\'s Anime Festival — cosplay contests, Japanese pop performances, fan panels, and more. Spread across multiple venues in the heart of Pensacola.',
+    image: '/images/pensacola-fox.png',
+    imageAlt: 'Pensacola Fox — anime-inspired crossbody',
+  },
+  {
+    id: 4,
+    label: 'On the Horizon',
     name: 'Pensacon 2027',
     dates: 'Feb 19 – 21, 2027',
     location: 'Pensacola, FL',
