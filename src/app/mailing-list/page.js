@@ -8,7 +8,7 @@ export default function MailingListPage() {
           <p className="ml-eyebrow">Never miss a show</p>
           <h1>Be the first to know.</h1>
           <p className="ml-sub">
-            Sew Nerdy Bags shows up at conventions and events across the Southeast. Sign up and we will let you know where we are headed next, when new designs drop, and when commission spots open up.
+            Sew Nerdy Bags shows up at conventions and events across the Southeast. Sign up and we will let you know where we are headed next and when new designs drop.
           </p>
           <div className="ml-form-wrap">
             <div className="klaviyo-form-XdKNJt"></div>

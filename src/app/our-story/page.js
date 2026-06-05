@@ -124,7 +124,6 @@ export default function OurStoryPage() {
           <h2>Every bag tells a story.<br />Find yours.</h2>
           <div className="cta-buttons">
             <Link href="/gallery" style={{display:'inline-block',background:'#d97706',color:'#fff',fontSize:'0.78rem',fontWeight:'700',letterSpacing:'0.08em',textTransform:'uppercase',padding:'0.75rem 1.4rem',textDecoration:'none'}}>Browse the gallery &rarr;</Link>
-            <Link href="/commission" style={{display:'inline-block',background:'transparent',color:'#fff',fontSize:'0.78rem',fontWeight:'700',letterSpacing:'0.08em',textTransform:'uppercase',padding:'0.75rem 1.4rem',textDecoration:'none',border:'1px solid #44403c'}}>Start a commission &rarr;</Link>
           </div>
           <div className="cta-mailing-nudge">
             <p className="cta-mailing-label">Want to know when we&rsquo;re at a show near you?</p>

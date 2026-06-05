@@ -34,22 +34,11 @@ export default function BagDetailPage({ params }) {
 
           <div className="flex gap-3">
             <a
-              href="/commission"
-              className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-white"
-            >
-              Commission Something Similar
-            </a>
-            <a
               href="/gallery"
               className="inline-flex items-center justify-center rounded-md border px-4 py-2"
             >
               Back to Gallery
             </a>
-          </div>
-
-          <div className="rounded-lg border p-4 text-sm text-gray-600">
-            Want a variation of this piece? Use the commission page to share
-            color ideas, size preferences, and any special details.
           </div>
         </div>
       </div>

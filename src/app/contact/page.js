@@ -45,7 +45,7 @@ export default function ContactPage() {
             We'd love to<br />hear from you.
           </h1>
           <p style={{ fontSize: "0.92rem", color: "rgba(255,255,255,0.72)", lineHeight: 1.7, margin: 0 }}>
-            Questions about our bags, upcoming shows, or anything else — send us a message and we will get back to you. For commission requests, head to the <a href="/commission" style={{ color: "#d97706", textDecoration: "none" }}>Create a Bag</a> page.
+            Questions about our bags, upcoming shows, or anything else — send us a message and we will get back to you.
           </p>
         </div>
       </div>
@@ -121,15 +121,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div>
-              <p style={infoLabelStyle}>Looking for something specific?</p>
-              <p style={{ fontSize: "0.83rem", color: "#6b7280", lineHeight: 1.6, margin: "0 0 0.5rem" }}>
-                For custom bag requests and commissions, use the dedicated form on our Create a Bag page.
-              </p>
-              <a href="/commission" style={{ fontSize: "0.78rem", fontWeight: 700, color: "#d97706", textDecoration: "none", letterSpacing: "0.04em" }}>
-                Start a commission →
-              </a>
-            </div>
 
           </div>
         </div>

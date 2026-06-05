@@ -24,6 +24,7 @@ export async function POST(request) {
     await transporter.sendMail({
       from: `"Sew Nerdy Bags Website" <${process.env.GMAIL_USER}>`,
       to: process.env.CONTACT_EMAIL.split(','),
+      cc: 'kevin@sewnerdybags.com',
       replyTo: email,
       subject: `Commission Request: ${theme} — ${name}`,
       html: `

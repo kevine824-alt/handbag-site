@@ -8,7 +8,7 @@ const FAQS = [
     id: 1,
     category: 'Finding Us',
     question: 'Where can I buy your bags?',
-    answer: 'Right now, the best place to find Sew Nerdy Bags is in person at conventions and shows across the Southeast. That\'s where new designs debut and where you can see, touch, and try everything before you commit. In the near future, we\'ll be opening up custom commissions directly through this site, plus limited small-batch drops of select designs. Sign up for the mailing list to be the first to know when that changes and to see where we\'re headed next.',
+    answer: 'Right now, the best place to find Sew Nerdy Bags is in person at conventions and shows across the Southeast. That\'s where new designs debut and where you can see, touch, and try everything before you commit. Sign up for the mailing list to be the first to know about new drops and where we\'re headed next.',
   },
   {
     id: 2,
@@ -21,12 +21,6 @@ const FAQS = [
     category: 'The Bags',
     question: 'What if something goes wrong with my bag?',
     answer: 'Every Sew Nerdy bag is handcrafted from the ground up, making each one a true one of a kind piece built with quality that\'s meant to last. We stand behind every stitch. If you ever run into an issue with your bag, reach out to us directly at the link below and we will work through it with you until it\'s fully resolved.',
-  },
-  {
-    id: 4,
-    category: 'Commissions',
-    question: 'Can I commission a custom bag?',
-    answer: 'Yes. Customers interested in building their own one of a kind bag can start the process at the commission page. It becomes a joint effort between you and the Sew Nerdy team to bring your vision to life. Whether you are looking for a unique gift or a fresh addition to your own collection, this is the place to start. Because each commission is a dedicated creative collaboration, spots are limited. Sign up early to secure your place in the queue. Pricing varies based on the scope of the project, and a deposit is required upfront, which is applied directly to the cost of your completed bag.',
   },
   {
     id: 5,
@@ -51,7 +45,7 @@ export default function FAQPage() {
         <div className="faq-hero-tint" aria-hidden="true" />
         <div className="faq-hero-inner">
           <h1>Got questions?</h1>
-          <p className="hero-sub">Everything you need to know about Sew Nerdy Bags, the commission process, and where to find us.</p>
+          <p className="hero-sub">Everything you need to know about Sew Nerdy Bags and where to find us.</p>
         </div>
       </section>
 
@@ -85,15 +79,9 @@ export default function FAQPage() {
       <section className="faq-cta">
         <div className="faq-cta-grid">
           <div className="cta-card">
-            <p className="cta-label">Custom Commissions</p>
-            <p className="cta-title">Ready to build something?</p>
-            <p className="cta-desc">Start the process and work directly with the Sew Nerdy team to bring your vision to life.</p>
-            <Link href="/commission" className="cta-btn">Start a commission &rarr;</Link>
-          </div>
-          <div className="cta-card">
             <p className="cta-label">Stay in the Loop</p>
             <p className="cta-title">Don&rsquo;t miss a show.</p>
-            <p className="cta-desc">Sign up for the mailing list to get show announcements, new drops, and commission openings first.</p>
+            <p className="cta-desc">Sign up for the mailing list to get show announcements and new drops first.</p>
             <Link href="/mailing-list" className="cta-btn">Join the list &rarr;</Link>
           </div>
           <div className="cta-card">
