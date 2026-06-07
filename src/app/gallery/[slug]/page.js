@@ -32,7 +32,14 @@ export default function BagDetailPage({ params }) {
             <p className="mt-3 text-gray-700">{bag.description}</p>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
+            <a
+              href={`/order-request?bag=${encodeURIComponent(bag.name)}`}
+              className="inline-flex items-center justify-center rounded-md px-4 py-2 text-white"
+              style={{ background: "#111827" }}
+            >
+              Request to Order
+            </a>
             <a
               href="/gallery"
               className="inline-flex items-center justify-center rounded-md border px-4 py-2"
