@@ -31,7 +31,7 @@ const SHOWS = [
     dates: 'Oct 31 – Nov 1, 2026',
     location: 'Pensacola, FL',
     details: 'Pensacola\'s Anime Festival — cosplay contests, Japanese pop performances, fan panels, and more. Spread across multiple venues in the heart of Pensacola.',
-    image: '/images/pensacola-fox.png',
+    image: '/images/pensacola-fox.jpg',
     imageAlt: 'Pensacola Fox — anime-inspired crossbody',
   },
   {

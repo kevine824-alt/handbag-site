@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ImageGallery({ images, name }) {
   const safeImages = Array.isArray(images) ? images : [];
@@ -17,8 +18,15 @@ export default function ImageGallery({ images, name }) {
   return (
     <div className="space-y-4">
       {/* Main image */}
-      <div className="aspect-square w-full overflow-hidden rounded-lg border bg-gray-50">
-        <img src={active} alt={name} className="h-full w-full object-cover" />
+      <div className="aspect-square w-full overflow-hidden rounded-lg border bg-gray-50 relative">
+        <Image
+          src={active}
+          alt={name}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          style={{ objectFit: "cover" }}
+          priority
+        />
       </div>
 
       {/* Thumbnails */}
@@ -29,15 +37,17 @@ export default function ImageGallery({ images, name }) {
               key={`${src}-${idx}`}
               type="button"
               onClick={() => setActive(src)}
-              className={`h-20 w-20 overflow-hidden rounded-md border ${
+              className={`h-20 w-20 overflow-hidden rounded-md border relative ${
                 active === src ? "ring-2 ring-black" : "opacity-70 hover:opacity-100"
               }`}
               aria-label={`View image ${idx + 1} for ${name}`}
             >
-              <img
+              <Image
                 src={src}
                 alt={`${name} thumbnail ${idx + 1}`}
-                className="h-full w-full object-cover"
+                fill
+                sizes="80px"
+                style={{ objectFit: "cover" }}
               />
             </button>
           ))}

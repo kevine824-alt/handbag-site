@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const ALL_BAGS = [
@@ -31,7 +32,7 @@ const ALL_BAGS = [
     event: "PensaPride 2025",
     style: "Crossbody",
     description: "A love letter to Pensacola on cream vegan leather. Hand-illustrated anime kitsune surrounded by downtown scenes — the Saenger Theatre, lanterns, ramen shops, and city life in full bloom.",
-    images: ["/images/pensacola-fox.png"],
+    images: ["/images/pensacola-fox.jpg"],
   },
   {
     slug: "pensacola-historic",
@@ -40,7 +41,7 @@ const ALL_BAGS = [
     event: "Pensacon 2025",
     style: "Messenger",
     description: "Cream vegan leather with a richly embroidered scene drawn from Pensacola's oldest stories — a dragon on the 1559 fort, cannons, lighthouse, and tall ships in the harbor.",
-    images: ["/images/pensacola-historic.png"],
+    images: ["/images/pensacola-historic.jpg"],
   },
   {
     slug: "dragon-con-40-atlanta",
@@ -49,7 +50,7 @@ const ALL_BAGS = [
     event: "Dragon Con 40",
     style: "Crossbody",
     description: "Quilted burgundy with a cream front panel: an embroidered dragon shield rising over a gold-spiked crest with the Atlanta skyline below. A convention exclusive built to mark the occasion.",
-    images: ["/images/dragon-con-40-cream.png"],
+    images: ["/images/dragon-con-40-cream.jpg"],
   },
   {
     slug: "dragon-con-40-night",
@@ -58,7 +59,7 @@ const ALL_BAGS = [
     event: "Dragon Con 40",
     style: "Crossbody",
     description: "The darker counterpart — deep quilted burgundy throughout, dragon shield rendered in crimson and gold thread against a black panel. Same convention, different energy.",
-    images: ["/images/dragon-con-40-dark.png"],
+    images: ["/images/dragon-con-40-dark.jpg"],
   },
   {
     slug: "dragon-con-pouch",
@@ -67,7 +68,7 @@ const ALL_BAGS = [
     event: "Dragon Con 40",
     style: "Pouch",
     description: "Black structured pouch with a dragon sweeping low over the Atlanta skyline at dusk. Compact and convention-ready. Part of the Dragon Con 40 collection.",
-    images: ["/images/dragon-con-pouch.png"],
+    images: ["/images/dragon-con-pouch.jpg"],
   },
   {
     slug: "hyrule-tapestry",
@@ -275,7 +276,7 @@ const ALL_BAGS = [
     category: "one-of-a-kind",
     style: "Backpack",
     description: "Blue and cream vegan leather with a richly embroidered scene: a badger in a jacket, reading beneath an oak tree at dusk. Quiet personality, serious craft.",
-    images: ["/images/hero-bag.png"],
+    images: ["/images/hero-bag.jpg"],
   },
 ];
 
@@ -299,7 +300,7 @@ export default function GalleryPage() {
 
       {/* Hero */}
       <div style={{
-        backgroundImage: "url('/images/parchment-hero.png')",
+        backgroundImage: "url('/images/parchment-hero.jpg')",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         borderBottom: "3px solid #d97706",
@@ -441,14 +442,13 @@ function BagCard({ bag }) {
         )}
 
         {/* Image */}
-        <img
+        <Image
           src={bag.images?.[0]}
           alt={bag.name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
-            display: "block",
             transition: "transform 0.4s ease",
             transform: hovered ? "scale(1.04)" : "scale(1)",
           }}

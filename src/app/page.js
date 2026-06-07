@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b">
 
         {/* Mobile hero — text first, logo below */}
-        <div className="flex flex-col items-center px-6 pt-8 pb-10 lg:hidden" style={{ backgroundImage: "url('/images/parchment.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="flex flex-col items-center px-6 pt-8 pb-10 lg:hidden" style={{ backgroundImage: "url('/images/parchment.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
           <p className="text-sm font-semibold tracking-widest uppercase text-center mb-4" style={{ color: "#92400e", textShadow: "0 1px 2px rgba(255,255,255,0.6)" }}>
             Family-made &nbsp;·&nbsp; One of one &nbsp;·&nbsp; Uniquely nerdy
           </p>
@@ -20,7 +20,7 @@ export default function HomePage() {
             You deserve a bag as original as you are.
           </p>
           <div className="flex flex-wrap gap-4 w-full mb-8">
-            <Link href="/gallery" className="flex-1 text-center bg-gray-900 px-6 py-3 text-sm font-semibold text-white">
+            <Link href="/gallery" className="flex-1 text-center bg-amber-600 px-6 py-3 text-sm font-semibold text-white">
               View Gallery
             </Link>
             <Link href="/our-story" className="flex-1 text-center border border-gray-400 px-6 py-3 text-sm font-semibold text-gray-700">
@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="hidden lg:grid lg:grid-cols-2 lg:h-[clamp(480px,62vh,680px)] overflow-hidden">
 
           {/* Text panel */}
-          <div className="flex h-full items-center px-16" style={{ backgroundImage: "url('/images/parchment.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="flex h-full items-center px-16" style={{ backgroundImage: "url('/images/parchment.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
             <div className="max-w-xl space-y-6">
               <p className="text-sm font-semibold tracking-widest uppercase" style={{ color: "#92400e", textShadow: "0 1px 2px rgba(255,255,255,0.6)" }}>
                 Family-made &nbsp;·&nbsp; One of one &nbsp;·&nbsp; Uniquely nerdy
@@ -52,7 +52,7 @@ export default function HomePage() {
                 You deserve a bag as original as you are.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Link href="/gallery" className="inline-flex items-center justify-center bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-700 transition">
+                <Link href="/gallery" className="inline-flex items-center justify-center bg-amber-600 px-6 py-3 text-sm font-semibold text-white hover:bg-amber-700 transition">
                   View Gallery
                 </Link>
                 <Link href="/our-story" className="inline-flex items-center justify-center border border-gray-400 px-6 py-3 text-sm font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 transition">
@@ -66,7 +66,7 @@ export default function HomePage() {
           <div
             className="flex items-center justify-center"
             style={{
-              backgroundImage: "url('/images/parchment.png')",
+              backgroundImage: "url('/images/parchment.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               borderLeft: "1px solid rgba(146,64,14,0.15)",
