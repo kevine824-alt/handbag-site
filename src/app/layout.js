@@ -6,8 +6,8 @@ export const metadata = {
   title: "Handcrafted Bags Studio",
   description: "One-of-a-kind handcrafted handbags",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
